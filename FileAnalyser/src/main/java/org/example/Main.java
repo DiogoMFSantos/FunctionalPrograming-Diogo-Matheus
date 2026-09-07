@@ -24,6 +24,7 @@ public class Main {
                     LinesWithWordAnalyser.linesWithWord(path, "my");
             double avgLenghtOfLines = LineLenghtAvgAnalyser.countAvgLineLenght(path);
             double avgLenghtOfWords = WordsLenghtAvgAnalyser.countAvgWordLength(path);
+            String longestLine = LongestLineAnalyser.findLongestLine(path);
 
             System.out.println(numberOfLines);
             System.out.println(numberOfWords);
@@ -33,5 +34,6 @@ public class Main {
             linesWithWord.forEach(System.out::println);
             System.out.println(avgLenghtOfLines);
             System.out.println(avgLenghtOfWords);
+            System.out.println(longestLine);
         }
     }
