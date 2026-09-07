@@ -26,6 +26,9 @@ public class Main {
             double avgLenghtOfWords = WordsLenghtAvgAnalyser.countAvgWordLength(path);
             String longestLine = LongestLineAnalyser.findLongestLine(path);
             List<String> longestWords = LongestWordsAnalyser.findLongestWords(path, 3);
+            String firstLongWord =
+                    FirstLongWordAnalyser.findFirstWordLongerThan(path, 10);
+
 
 
             System.out.println(numberOfLines);
@@ -38,5 +41,6 @@ public class Main {
             System.out.println(avgLenghtOfWords);
             System.out.println(longestLine);
             longestWords.forEach(word -> System.out.println(word));
+            System.out.println(firstLongWord);
         }
     }
