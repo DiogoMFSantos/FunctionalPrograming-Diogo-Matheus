@@ -3,6 +3,7 @@ package org.example;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.List;
 import java.util.stream.Stream;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -19,7 +20,8 @@ public class Main {
             long numberOfNonBlanks = NonEmptyAnalyser.countNonBlanks(path);
             long numberOfUniWords = UniWordAnalyser.uniqueWordCount(path);
             long numberOfSpeWords = SpecificWordAnalyser.specificWordCount(path,"Cheeseburgers");
-            long numberOfLinesWithWord = LinesWithWordAnalyser.linesWithWordCount(path,"my");
+            List<String> linesWithWord =
+                    LinesWithWordAnalyser.linesWithWord(path, "my");
             double avgLenghtOfLines = LineLenghtAvgAnalyser.countAvgLineLenght(path);
             double avgLenghtOfWords = WordsLenghtAvgAnalyser.countAvgWordLength(path);
 
@@ -28,7 +30,7 @@ public class Main {
             System.out.println(numberOfNonBlanks);
             System.out.println(numberOfUniWords);
             System.out.println(numberOfSpeWords);
-            System.out.println(numberOfLinesWithWord);
+            linesWithWord.forEach(System.out::println);
             System.out.println(avgLenghtOfLines);
             System.out.println(avgLenghtOfWords);
         }
