@@ -12,9 +12,11 @@ public class WordAnalyser {
     }
 
     public static long countWords(Path path) throws IOException {
-        try (Stream<String> lines= Files.lines(path)){
-            Stream<String> words = lines.flatMap(line -> Stream.of(line.split(" +")));
-            return words.count();
+        try (Stream<String> lines = Files.lines(path)) {
+            return lines
+                    .filter(line -> !line.isBlank())
+                    .flatMap(line -> Stream.of(line.trim().split("\\s+")))
+                    .count();
         }
     }
 }
