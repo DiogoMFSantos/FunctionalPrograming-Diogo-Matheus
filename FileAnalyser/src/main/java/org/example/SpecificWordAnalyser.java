@@ -13,7 +13,7 @@ public class SpecificWordAnalyser {
     public static long specificWordCount(Path path, String targetWord) throws IOException {
         try (Stream<String> lines= Files.lines(path)){
             Stream<String> words = lines.flatMap(line -> Stream.of(line.split(" +")));
-            return words.filter(word -> word.equals(targetWord)).count();
+            return words.filter(word -> word.equalsIgnoreCase(targetWord)).count();
         }
     }
 
