@@ -37,6 +37,8 @@ public class Main {
                     LinesWithNumbersAnalyser.findLinesWithNumbers(path);
             List<String> regexLines =
                     RegexLinesAnalyser.findLinesMatchingRegex(path, ".*health.*");
+            List<String> palindromes =
+                    PalindromeAnalyser.findPalindromes(path);
 
 
             System.out.println(numberOfLines);
@@ -55,5 +57,6 @@ public class Main {
                     System.out.println(word + " -> " + count));
             linesWithNumbers.forEach(line -> System.out.println(line));
             regexLines.forEach(line -> System.out.println(line));
+            palindromes.forEach(word -> System.out.println(word));
         }
     }
