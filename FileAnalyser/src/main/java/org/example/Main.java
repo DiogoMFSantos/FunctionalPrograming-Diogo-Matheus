@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.stream.Stream;
 
@@ -30,6 +31,8 @@ public class Main {
                     FirstLongWordAnalyser.findFirstWordLongerThan(path, 10);
             Set<String> commonWords =
                     CommonWordsAnalyser.findCommonWords(path, path2);
+            Map<String, Long> wordFrequency =
+                    WordFrequencyAnalyser.countWordFrequency(path);
 
 
 
@@ -45,5 +48,7 @@ public class Main {
             longestWords.forEach(word -> System.out.println(word));
             System.out.println(firstLongWord);
             commonWords.forEach(word -> System.out.println(word));
+            wordFrequency.forEach((word, count) ->
+                    System.out.println(word + " -> " + count));
         }
     }
