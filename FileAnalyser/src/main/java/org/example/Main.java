@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Stream;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -11,9 +12,8 @@ import java.util.stream.Stream;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-            Path path = Path.of(
-                    "src/main/resources/file.txt"
-            );
+            Path path = Path.of("src/main/resources/file.txt");
+            Path path2 = Path.of("src/main/resources/file2.txt");
 
             long numberOfLines = FileAnalyser.countLines(path);
             long numberOfWords = WordAnalyser.countWords(path);
@@ -28,6 +28,8 @@ public class Main {
             List<String> longestWords = LongestWordsAnalyser.findLongestWords(path, 3);
             String firstLongWord =
                     FirstLongWordAnalyser.findFirstWordLongerThan(path, 10);
+            Set<String> commonWords =
+                    CommonWordsAnalyser.findCommonWords(path, path2);
 
 
 
@@ -42,5 +44,6 @@ public class Main {
             System.out.println(longestLine);
             longestWords.forEach(word -> System.out.println(word));
             System.out.println(firstLongWord);
+            commonWords.forEach(word -> System.out.println(word));
         }
     }
