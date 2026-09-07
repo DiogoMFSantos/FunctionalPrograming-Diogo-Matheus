@@ -35,6 +35,8 @@ public class Main {
                     WordFrequencyAnalyser.countWordFrequency(path);
             List<String> linesWithNumbers =
                     LinesWithNumbersAnalyser.findLinesWithNumbers(path);
+            List<String> regexLines =
+                    RegexLinesAnalyser.findLinesMatchingRegex(path, ".*health.*");
 
 
             System.out.println(numberOfLines);
@@ -52,5 +54,6 @@ public class Main {
             wordFrequency.forEach((word, count) ->
                     System.out.println(word + " -> " + count));
             linesWithNumbers.forEach(line -> System.out.println(line));
+            regexLines.forEach(line -> System.out.println(line));
         }
     }
