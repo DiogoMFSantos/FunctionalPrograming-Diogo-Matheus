@@ -33,7 +33,8 @@ public class Main {
                     CommonWordsAnalyser.findCommonWords(path, path2);
             Map<String, Long> wordFrequency =
                     WordFrequencyAnalyser.countWordFrequency(path);
-
+            List<String> linesWithNumbers =
+                    LinesWithNumbersAnalyser.findLinesWithNumbers(path);
 
 
             System.out.println(numberOfLines);
@@ -50,5 +51,6 @@ public class Main {
             commonWords.forEach(word -> System.out.println(word));
             wordFrequency.forEach((word, count) ->
                     System.out.println(word + " -> " + count));
+            linesWithNumbers.forEach(line -> System.out.println(line));
         }
     }
