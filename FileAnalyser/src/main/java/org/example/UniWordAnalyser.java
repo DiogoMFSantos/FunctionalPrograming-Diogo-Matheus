@@ -11,11 +11,13 @@ public class UniWordAnalyser {
     }
 
     public static long uniqueWordCount(Path path) throws IOException {
-            try (Stream<String> lines= Files.lines(path)){
-                Stream<String> words = lines.flatMap(line -> Stream.of(line.split(" +")));
-                return words.distinct().count();
-            }
-
-
+        try (Stream<String> lines = Files.lines(path)) {
+            return lines
+                    .filter(line -> !line.isBlank())
+                    .flatMap(line -> Stream.of(line.trim().split("\\s+")))
+                    .map(String::toLowerCase)
+                    .distinct()
+                    .count();
+        }
     }
 }
