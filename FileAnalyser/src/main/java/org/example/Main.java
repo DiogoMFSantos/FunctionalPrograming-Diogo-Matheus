@@ -19,7 +19,9 @@ public class Main {
             long numberOfNonBlanks = NonEmptyAnalyser.countNonBlanks(path);
             long numberOfUniWords = UniWordAnalyser.uniqueWordCount(path);
             long numberOfSpeWords = SpecificWordAnalyser.specificWordCount(path,"Cheeseburgers");
-            long numberOfLinesWithWord = LinesWithWordAnalyser.linesWithWordCound(path,"my");
+            long numberOfLinesWithWord = LinesWithWordAnalyser.linesWithWordCount(path,"my");
+            double avgLenghtOfLines = LineLenghtAvgAnalyser.countAvgLineLenght(path);
+            double avgLenghtOfWords = WordsLenghtAvgAnalyser.countAvgWordLength(path);
 
             System.out.println(numberOfLines);
             System.out.println(numberOfWords);
@@ -27,5 +29,7 @@ public class Main {
             System.out.println(numberOfUniWords);
             System.out.println(numberOfSpeWords);
             System.out.println(numberOfLinesWithWord);
+            System.out.println(avgLenghtOfLines);
+            System.out.println(avgLenghtOfWords);
         }
     }

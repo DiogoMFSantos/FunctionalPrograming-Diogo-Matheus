@@ -10,7 +10,7 @@ public class LinesWithWordAnalyser {
 
     }
 
-    public static long linesWithWordCound (Path path,String targetWord) throws IOException {
+    public static long linesWithWordCount (Path path,String targetWord) throws IOException {
         try (Stream<String> lines= Files.lines(path)){
                        return lines.filter(line -> line.contains(targetWord)).count();
         }
