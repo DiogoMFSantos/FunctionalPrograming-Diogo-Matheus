@@ -5,8 +5,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.stream.Stream;
 
-public class LineLenghtAvgAnalyser {
-    private LineLenghtAvgAnalyser(){
+public class LineLengthAvgAnalyser {
+    private LineLengthAvgAnalyser(){
     }
 
     public static double countAvgLineLenght(Path path) throws IOException {

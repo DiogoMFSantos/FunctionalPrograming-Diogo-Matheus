@@ -36,11 +36,11 @@ public class FileAnalyserDemo {
         System.out.println("\n--- Length Analysis ---");
         System.out.println(
                 "Average line length: "
-                        + LineLenghtAvgAnalyser.countAvgLineLenght(path)
+                        + LineLengthAvgAnalyser.countAvgLineLenght(path)
         );
         System.out.println(
                 "Average word length: "
-                        + WordsLenghtAvgAnalyser.countAvgWordLength(path)
+                        + WordsLengthAvgAnalyser.countAvgWordLength(path)
         );
         System.out.println(
                 "Shortest line: "

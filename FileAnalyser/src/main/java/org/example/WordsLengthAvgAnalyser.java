@@ -5,8 +5,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.stream.Stream;
 
-public class WordsLenghtAvgAnalyser {
-    private WordsLenghtAvgAnalyser(){}
+public class WordsLengthAvgAnalyser {
+    private WordsLengthAvgAnalyser(){}
 
     public static double countAvgWordLength(Path path) throws IOException {
         try (Stream<String> lines = Files.lines(path)) {
