@@ -42,10 +42,10 @@ public class FileAnalyserDemo {
                 "Average word length: "
                         + WordsLenghtAvgAnalyser.countAvgWordLength(path)
         );
-        // System.out.println(
-//         "Shortest line: "
-//                 + ShortestLineAnalyser.findShortestLine(path)
-//          );
+        System.out.println(
+                "Shortest line: "
+                        + ShortestLineAnalyser.findShortestLine(path)
+        );
         System.out.println(
                 "Longest line: "
                         + LongestLineAnalyser.findLongestLine(path)
