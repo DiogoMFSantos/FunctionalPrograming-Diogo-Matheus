@@ -5,7 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.stream.Stream;
 
-
+//contar todas as palavras do ficheiro
 public class WordAnalyser {
     private WordAnalyser() {
         // Utility class - prevent creating objects

@@ -7,6 +7,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+//encontrar palavras em comum em dois ficheiros
 public class CommonWordsAnalyser {
 
     private CommonWordsAnalyser() {

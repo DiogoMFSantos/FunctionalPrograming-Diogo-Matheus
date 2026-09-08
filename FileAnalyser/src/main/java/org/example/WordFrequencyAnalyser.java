@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+//contar quantas vezes cada palavra aparece
 public class WordFrequencyAnalyser {
 
     private WordFrequencyAnalyser() {
@@ -19,8 +20,7 @@ public class WordFrequencyAnalyser {
                     .flatMap(line -> Stream.of(line.trim().split("\\s+")))
                     .map(String::toLowerCase)
                     .collect(Collectors.groupingBy(
-                            word -> word,
-                            Collectors.counting()
+                            word -> word, Collectors.counting()
                     ));
         }
     }

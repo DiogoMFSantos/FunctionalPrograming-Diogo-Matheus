@@ -6,6 +6,7 @@ import java.nio.file.Path;
 import java.util.List;
 import java.util.stream.Stream;
 
+//encotrar linhas que contenham algum número
 public class LinesWithNumbersAnalyser {
 
     private LinesWithNumbersAnalyser() {

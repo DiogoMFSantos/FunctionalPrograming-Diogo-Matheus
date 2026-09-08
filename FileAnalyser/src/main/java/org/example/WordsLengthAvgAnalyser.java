@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.stream.Stream;
 
+//calcular tamanho medio das palavras
 public class WordsLengthAvgAnalyser {
     private WordsLengthAvgAnalyser(){}
 

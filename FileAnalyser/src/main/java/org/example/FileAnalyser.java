@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.stream.Stream;
 
+//contar linhas existentes
 public final class FileAnalyser {
     private FileAnalyser() {
         // Utility class - prevent creating objects

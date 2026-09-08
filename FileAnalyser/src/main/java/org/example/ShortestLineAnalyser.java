@@ -6,6 +6,7 @@ import java.nio.file.Path;
 import java.util.Comparator;
 import java.util.stream.Stream;
 
+//encontar a linha mais curta
 public class ShortestLineAnalyser {
 
     private ShortestLineAnalyser() {

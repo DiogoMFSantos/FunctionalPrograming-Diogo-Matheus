@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.stream.Stream;
 
+//primeira palavra com mais de n caracteres
 public class FirstLongWordAnalyser {
 
     private FirstLongWordAnalyser() {

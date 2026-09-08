@@ -6,14 +6,16 @@ import java.nio.file.Path;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+//contar quantas vezes uma palavra aparece
 public class SpecificWordAnalyser {
     private SpecificWordAnalyser(){
     }
 
     public static long specificWordCount(Path path, String targetWord) throws IOException {
         try (Stream<String> lines= Files.lines(path)){
-            Stream<String> words = lines.flatMap(line -> Stream.of(line.split(" +")));
-            return words.filter(word -> word.equalsIgnoreCase(targetWord)).count();
+            Stream<String> words = lines.flatMap(line -> Stream.of(line.split("\\s+")));
+            return words.filter(word -> word.equalsIgnoreCase(targetWord))
+                        .count();
         }
     }
 

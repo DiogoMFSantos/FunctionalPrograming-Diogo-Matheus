@@ -7,6 +7,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Stream;
 
+//encontra as n palavras mais longas
 public class LongestWordsAnalyser {
 
     private LongestWordsAnalyser() {

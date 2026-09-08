@@ -6,6 +6,7 @@ import java.nio.file.Path;
 import java.util.List;
 import java.util.stream.Stream;
 
+//encontrar linhas de acordo com uma regex fornecida
 public class RegexLinesAnalyser {
 
     private RegexLinesAnalyser() {
